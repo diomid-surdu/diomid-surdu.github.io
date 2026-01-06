@@ -1,18 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
+    /* HEader */
+        .header {
+            display: flex;
+            align-items: center; /* Align logo and links vertically */
+            gap: 2rem; /* Space between logo and navigation */
+            padding: 1rem 2rem;
+            background-color: #212529; /* Header background color */
+
+        }
+
+        .nav-options {
+            display: flex;
+            gap: 4rem; /* Space between links */
+            flex-grow: 1; /* Push the links to take up available space */
+            justify-content: flex-start; /* Align links to the left */
+        }
+
+        .nav-options a {
+            text-decoration: none;
+            color: #adb5bd;
+            font-size: 2.5rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-options a:hover {
+            color: #979083;
+            transform: scale(1.2);
+        }
+    /* HEader end */
+    
         body {
             margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #1e3d59, #ecc19c);
-            color: #ff6e40;
+            font-family: 'Roboto';
+            background: linear-gradient(180deg, #13191e, #49586a);
+            color: #73877b;
         }
-        table {
+        .container {
             margin: 50px auto;
             width: 90%;
             max-width: 900px;
@@ -20,15 +52,17 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-        th, td {
-            text-align: center;
             padding: 20px;
+        }
+        .section {
+            text-align: center;
+            margin-bottom: 30px;
         }
         h1 {
             font-size: 2.5rem;
             margin: 0;
         }
+
         h4 {
             font-size: 1rem;
             color: #625b38;
@@ -39,97 +73,92 @@
             transition: color 0.3s ease;
         }
         a:hover {
-            color: #ff6e40;
+            color: #643122;
         }
         img {
             border-radius: 10px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 100%;
+            height: auto;
         }
         img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transform: scale(1.3);
+            /*box-shadow: 5rem 5rem 5rem rgba(255, 255, 255, 0.3);*/
         }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            margin: 10px 0;
-        }
+        
     </style>
 </head>
+<header>
+    <div class="header">
+        <img src="ressources/logo_placeholder.png" style="width:10rem;height:5rem;margin:.2rem" alt="mon_logo">
+        <nav class="nav-options">
+            <a href="#PP" class="pixelify_font">Accueil</a>
+            <a href="CV.html" class="pixelify_font">CV</a>
+            <a href="#services" class="pixelify_font">Services</a>
+            <a href="#portfolio" class="pixelify_font">Portfolio</a>
+            <a href="#contact" class="pixelify_font">Contact</a>
+        </nav>
+    </div>
+</header>
+<main>
 <body>
-    <table>
-        <tr>
-            <th>
-                <h1 style="font-size: 4rem;">Bonjour les amicis</h1>
-            </th>
-        </tr>
-        <tr>
-            <th>
-                <img src="index.jpg" alt="Welcome Image" width="600" height="300">
-            </th>
-        </tr>
-        <tr>
-            <td>
-                <a href="CV.html">
-                    <h1 style = "color: #e39c02">CV-ul Personal</h1>
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <th>
-                <a href="https://www.delucru.md/articles/ghid-complet-cum-sa-ti-faci-un-cv-profesionist">
-                    <img src="cv.png" alt="Curriculum Guide" width="500" height="300">
-                </a>
-                <h4>Click pe imagine ca să vezi cum să-ți faci un CV</h4>
-            </th>
-        </tr>
-        <tr>
-            <td>
-                <a href="Orarul.html">
-                    <h1 style = "color: #e39c02">Orarul Lecțiilor clasa X</h1>
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <th>
-                <a href="https://asachi.md/orar/orarul-lectiilor/clase-liceale/">
-                    <img src="book.jpg" alt="Orar" width="600" height="400">
-                </a>
-                <h4>Click pe imagine ca să vezi orarul complet</h4>
-            </th>
-        </tr>
-        <tr>
-            <td>
-                <a href="hobby.html">
-                    <h1 style = "color: #d08f02">Hobby-urile mele preferate</h1>
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <th>
-                <a href="https://ro.wikipedia.org/wiki/Hobby">
-                    <img src="bb.jpg" alt="Hobby" width="600" height="400">
-                </a>
-                <h4>Click pe imagine pentru a afla ce este un hobby</h4>
-            </th>
-        </tr>
-        <tr>
-            <td>
-                <a href="alegere.html">
-                     <h1>Informații Importante despre Liceul Nostru Iubit Gheorghe Asachi</h1>
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <th>
-                <a href="https://ro.wikipedia.org/wiki/Gheorghe_Asachi">
-                    <img src="asa.jpg" alt="Gheorghe Asachi" width="600" height="400">
-                </a>
-                <h4>Click</h4>
-            </th>
-        </tr>
-    </table>
+    <div class="container">
+        <div class="section">
+            <h2 style = "font-family: 'Jacquard12';">This is my site</h2>
+            <h2 style="font-size: 4rem;">YO ts my site<noframes>z</noframes></h2>
+        </div>
+        <div class="section">
+            <img src="ressources/index.jpg" alt="Welcome Image" width="600" height="300">
+        </div>
+        <div class="section">
+            <a href="CV.html">
+                <h1 style="color: #e39c02">CV-ul Personal</h1>
+            </a>
+        </div>
+        <div class="section">
+            <a href="https://www.delucru.md/articles/ghid-complet-cum-sa-ti-faci-un-cv-profesionist">
+                <img src="cv.png" alt="Curriculum Guide" width="500" height="300">
+            </a>
+            <h4>Click pe imagine ca să vezi cum să-ți faci un CV</h4>
+        </div>
+        <div class="section">
+            <a href="Orarul.html">
+                <h1 style="color: #e39c02">Orarul Lecțiilor clasa X</h1>
+            </a>
+        </div>
+        <div class="section">
+            <a href="https://asachi.md/orar/orarul-lectiilor/clase-liceale/">
+                <img src="book.jpg" alt="Orar" width="600" height="400">
+            </a>
+            <h4>Click pe imagine ca să vezi orarul complet</h4>
+        </div>
+        <div class="section">
+            <a href="hobby.html">
+                <h1 style="color: #d08f02">Hobby-urile mele preferate</h1>
+            </a>
+        </div>
+        <div class="section">
+            <a href="https://ro.wikipedia.org/wiki/Hobby">
+                <img src="bb.jpg" alt="Hobby" width="600" height="400">
+            </a>
+            <h4>Click pe imagine pentru a afla ce este un hobby</h4>
+        </div>
+        <div class="section">
+            <a href="alegere.html">
+                <h1>Informații Importante despre Liceul Nostru Iubit Gheorghe Asachi</h1>
+            </a>
+        </div>
+        <div class="section">
+            <a href="https://ro.wikipedia.org/wiki/Gheorghe_Asachi">
+                <img src="asa.jpg" alt="Gheorghe Asachi" width="600" height="400">
+            </a>
+            <h4>Click</h4>
+        </div>
+        <div class="section medieval_font">This is medieval text</div>
+    </div>
 </body>
+</main>
+<footer>
+
+</footer>
 </html>

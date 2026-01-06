@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Byte';
+    src: url('./fonts/Bytesized.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Jacquard12';
+    src: url('./fonts/Jacquard12.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'CoralPixels';
+    src: url('./fonts/CoralPixels.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Jersey10';
+    src: url('./fonts/Jersey10.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'PixelifySans';
+    src: url('./fonts/PixelifySans.ttf') format('truetype');
+}
+
+.byte_font {
+    font-family: 'Byte', serif;
+    font-size: 2rem;
+    color: #333;
+}
+.medieval_font {
+    font-family: 'Jacquard12', serif;
+    font-size: 2rem;
+    color: #333;
+}
+.coral_font {
+    font-family: 'CoralPixels', serif;
+    font-size: 2rem;
+    color: #333;
+}
+.jersey_font {
+    font-family: 'Jersey10', serif;
+    font-size: 2rem;
+    color: #333;
+}
+.pixelify_font {
+    font-family: 'PixelifySans', serif;
+    font-size: 2rem;
+    color: #333;
+}
