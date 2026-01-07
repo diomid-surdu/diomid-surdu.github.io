@@ -3,38 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>D10S4ull</title>
     <link rel="stylesheet" href="style.css">
     <style>
     /* HEader */
         .header {
             display: flex;
             align-items: center; /* Align logo and links vertically */
-            gap: 2rem; /* Space between logo and navigation */
+            justify-content: space-between; /* Space between logo and links */
             padding: 1rem 2rem;
             background-color: #212529; /* Header background color */
-
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
         }
 
         .nav-options {
             display: flex;
-            gap: 4rem; /* Space between links */
-            flex-grow: 1; /* Push the links to take up available space */
+            gap: 2rem; /* Space between links */
+            flex-wrap: wrap; /* Allow links to wrap on smaller screens */
             justify-content: flex-start; /* Align links to the left */
         }
 
         .nav-options a {
             text-decoration: none;
             color: #adb5bd;
-            font-size: 2.5rem;
+            font-size: 1.5rem; /* Adjust font size for better responsiveness */
             font-weight: 600;
             transition: color 0.3s ease;
         }
 
         .nav-options a:hover {
             color: #979083;
-            transform: scale(1.2);
+            transform: scale(1.1);
+        }
+
+        /* Media Query for Smaller Screens */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column; /* Stack the logo and nav links vertically */
+                align-items: center; /* Center align the content */
+            }
+
+            .nav-options {
+                justify-content: center; /* Center the links */
+                gap: 1rem; /* Reduce the gap between links */
+            }
+
+            .nav-options a {
+                font-size: 1.2rem; /* Reduce font size for smaller screens */
+            }
         }
     /* HEader end */
     
@@ -105,7 +121,7 @@
     <div class="container">
         <div class="section">
             <h2 style = "font-family: 'Jacquard12';">This is my site</h2>
-            <h2 style="font-size: 4rem;">YO ts my site<noframes>z</noframes></h2>
+            <h2 style="font-size: 4rem;">YO ts my site</h2>
         </div>
         <div class="section">
             <img src="ressources/index.jpg" alt="Welcome Image" width="600" height="300">
@@ -121,40 +137,9 @@
             </a>
             <h4>Click pe imagine ca să vezi cum să-ți faci un CV</h4>
         </div>
-        <div class="section">
-            <a href="Orarul.html">
-                <h1 style="color: #e39c02">Orarul Lecțiilor clasa X</h1>
-            </a>
-        </div>
-        <div class="section">
-            <a href="https://asachi.md/orar/orarul-lectiilor/clase-liceale/">
-                <img src="book.jpg" alt="Orar" width="600" height="400">
-            </a>
-            <h4>Click pe imagine ca să vezi orarul complet</h4>
-        </div>
-        <div class="section">
-            <a href="hobby.html">
-                <h1 style="color: #d08f02">Hobby-urile mele preferate</h1>
-            </a>
-        </div>
-        <div class="section">
-            <a href="https://ro.wikipedia.org/wiki/Hobby">
-                <img src="bb.jpg" alt="Hobby" width="600" height="400">
-            </a>
-            <h4>Click pe imagine pentru a afla ce este un hobby</h4>
-        </div>
-        <div class="section">
-            <a href="alegere.html">
-                <h1>Informații Importante despre Liceul Nostru Iubit Gheorghe Asachi</h1>
-            </a>
-        </div>
-        <div class="section">
-            <a href="https://ro.wikipedia.org/wiki/Gheorghe_Asachi">
-                <img src="asa.jpg" alt="Gheorghe Asachi" width="600" height="400">
-            </a>
-            <h4>Click</h4>
-        </div>
-        <div class="section medieval_font">This is medieval text</div>
+        
+        <div class="section medieval_font">Merci pour visiter mon site Chevalier Errant</div>
+        <div class="section medieval_font">Mtn la garde est terminée</div>
     </div>
 </body>
 </main>

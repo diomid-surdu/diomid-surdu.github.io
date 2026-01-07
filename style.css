@@ -1,3 +1,4 @@
+/*fonts begin*/
 @font-face {
     font-family: 'Byte';
     src: url('./fonts/Bytesized.ttf') format('truetype');
@@ -44,3 +45,52 @@
     font-size: 2rem;
     color: #333;
 }
+/*fonts end*/
+
+/*header begin*/
+.header {
+    display: flex;
+    align-items: center; /* Align logo and links vertically */
+    justify-content: space-between; /* Space between logo and links */
+    padding: 1rem 2rem;
+    background-color: #212529; /* Header background color */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.nav-options {
+    display: flex;
+    gap: 2rem; /* Space between links */
+    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+    justify-content: flex-start; /* Align links to the left */
+}
+
+.nav-options a {
+    text-decoration: none;
+    color: #adb5bd;
+    font-size: 1.5rem; /* Adjust font size for better responsiveness */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-options a:hover {
+    color: #979083;
+    transform: scale(1.1);
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack the logo and nav links vertically */
+        align-items: center; /* Center align the content */
+    }
+
+    .nav-options {
+        justify-content: center; /* Center the links */
+        gap: 1rem; /* Reduce the gap between links */
+    }
+
+    .nav-options a {
+        font-size: 1.2rem; /* Reduce font size for smaller screens */
+    }
+}
+/*header end*/
