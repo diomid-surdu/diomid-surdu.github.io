@@ -6,53 +6,6 @@
     <title>D10S4ull</title>
     <link rel="stylesheet" href="style.css">
     <style>
-    /* HEader */
-        .header {
-            display: flex;
-            align-items: center; /* Align logo and links vertically */
-            justify-content: space-between; /* Space between logo and links */
-            padding: 1rem 2rem;
-            background-color: #212529; /* Header background color */
-            flex-wrap: wrap; /* Allow wrapping for smaller screens */
-        }
-
-        .nav-options {
-            display: flex;
-            gap: 2rem; /* Space between links */
-            flex-wrap: wrap; /* Allow links to wrap on smaller screens */
-            justify-content: flex-start; /* Align links to the left */
-        }
-
-        .nav-options a {
-            text-decoration: none;
-            color: #adb5bd;
-            font-size: 1.5rem; /* Adjust font size for better responsiveness */
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        .nav-options a:hover {
-            color: #979083;
-            transform: scale(1.1);
-        }
-
-        /* Media Query for Smaller Screens */
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column; /* Stack the logo and nav links vertically */
-                align-items: center; /* Center align the content */
-            }
-
-            .nav-options {
-                justify-content: center; /* Center the links */
-                gap: 1rem; /* Reduce the gap between links */
-            }
-
-            .nav-options a {
-                font-size: 1.2rem; /* Reduce font size for smaller screens */
-            }
-        }
-    /* HEader end */
     
         body {
             margin: 0;
@@ -64,7 +17,7 @@
             margin: 50px auto;
             width: 90%;
             max-width: 900px;
-            background: linear-gradient(135deg, #f5f0e1, #c4a35a);
+            background: linear-gradient(180deg, #f5f0e1, #c4a35a);
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -108,7 +61,7 @@
     <div class="header">
         <img src="ressources/logo_placeholder.png" style="width:10rem;height:5rem;margin:.2rem" alt="mon_logo">
         <nav class="nav-options">
-            <a href="#PP" class="pixelify_font">Accueil</a>
+            <a href="index.html" class="pixelify_font">Accueil</a>
             <a href="CV.html" class="pixelify_font">CV</a>
             <a href="#services" class="pixelify_font">Services</a>
             <a href="#portfolio" class="pixelify_font">Portfolio</a>
