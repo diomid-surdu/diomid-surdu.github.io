@@ -20,6 +20,11 @@
     font-family: 'PixelifySans';
     src: url('./fonts/PixelifySans.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'Neuton';
+    src: url('./fonts/Neuton.ttf') format('truetype');
+}
+
 
 .byte_font {
     font-family: 'Byte', serif;
@@ -43,6 +48,11 @@
 }
 .pixelify_font {
     font-family: 'PixelifySans', serif;
+    font-size: 2rem;
+    color: #333;
+}
+.neuton_font {
+    font-family: 'Neuton', serif;
     font-size: 2rem;
     color: #333;
 }
