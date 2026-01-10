@@ -59,7 +59,7 @@
 
 .nav-options {
     display: flex;
-    gap: 2rem; /* Space between links */
+    gap: 3.5rem; /* Space between links */
     flex-wrap: wrap; /* Allow links to wrap on smaller screens */
     justify-content: flex-start; /* Align links to the left */
 }

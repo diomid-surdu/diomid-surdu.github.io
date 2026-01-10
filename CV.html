@@ -22,18 +22,18 @@
             align-items: center; /* Align logo and links vertically */
             justify-content: space-between; /* Space between logo and links */
             padding: 1rem 2rem;
-            background-color: #D29F80; /* Header background color */
+            background-color: #82604b; /* Header background color */
             flex-wrap: wrap; /* Allow wrapping for smaller screens */
         }
         .nav-options {
             display: flex;
-            gap: .01rem; /* Space between links */
+            gap: .5rem; /* Space between links */
             flex-wrap: wrap; /* Allow links to wrap on smaller screens */
             justify-content: flex-start; /* Align links to the left */
         }
         .nav-options a {
             text-decoration: none;
-            color: #604652;
+            color: #A0937D;
             font-size: 1.5rem; /* Adjust font size for better responsiveness */
             font-weight: 600;
             transition: color 0.3s ease;
@@ -56,7 +56,7 @@
         }
         .profile-pic {
             flex: 0 0 300px; /* Fixed width for the image */
-            height: 1260px;
+            height: 1450px;
             background: rgb(176, 185, 151);
             padding: 30px;
             text-align: left;
@@ -84,7 +84,6 @@
         }
         h3 {
             font-size: 1.2rem;
-            color: #333;
         }
         ul, ol {
             padding-left: 20px;
@@ -110,6 +109,21 @@
             color: #004d40;
             transform: scale(1.3);
         }
+        /*float*/
+        div.fltcontainer {
+            width:100%;
+            overflow:auto;
+        }
+        div.fltcontainer div {
+            width:33%;  
+            float:left;
+            margin-right: 10%;
+        }
+        div.mycontainer div:last-child {
+            margin-right: 0;
+        }
+
+
     </style>
 </head>
 <body>
@@ -155,12 +169,14 @@
             <p>Élève en Terminale, profil scientifique, passionné par l’informatique, les mathématiques et les sciences réelles, je souhaite poursuivre mes études supérieures en France. Autonome et curieux, je développe des projets numériques, je m’intéresse aux systèmes et au développement web, en complément de ma formation scolaire.</p>
 
             <h1>Formation</h1>
+            <hr style="width:100%;height:2px;border-width:0;color:#0c6a3e;background-color:#0c6a3e">
             <ul>
                 <li><strong>Établissement Public Lycée Théorique Gheorghe Asachi</strong>, Chisinau, République de Moldavie (Sept. 2023 – Présent)</li>
                 <li><strong>École de musique Maria Biesu</strong>, Chisinau, République de Moldavie (Sept. 2014 – Juin 2021)</li>
             </ul>
 
             <h1>Formations Complémentaires</h1>
+            <hr style="text-align:left;margin-left:0;width:85%;height:2px;border-width:0;color:#0c6a3e;background-color:#0c6a3e">
             <ul><h2>Certifications Certiport(Pearson VUE)</h2>
                 <li><strong>IT Specialist –</strong> Python (Score: 880 / 1000)</li>
                 <li><strong>IT Specialist – </strong>Configuration et gestion des appareils (Score: 859 / 1000)</li>
@@ -168,14 +184,25 @@
             </ul>
 
             <h1>Projets Personnels</h1>
-            <ul>
-                <li><strong>Jeu Tic-Tac-Toe:</strong> Jeu de logique avec interface et conditions de victoire. <a href="https://github.com/diomid-surdu27/Tic-Tac-Toe">Lien GitHub</a></li>
-                <li><strong>CGI – 3 monuments de ma ville:</strong> Modélisation et animation 3D réalistes. <a href="https://github.com/diomid-surdu/CGI-museums">Lien GitHub</a></li>
-                <li><strong>Portfolio Web:</strong> Site web personnel. <a href="https://diomid-surdu.github.io/">Lien</a></li>
-                <li><strong>Construction d’un PC:</strong> Montage et configuration d’un PC gaming.</li>
-            </ul>
+            <hr style="width:100%;height:2px;border-width:0;color:#0c6a3e;background-color:#0c6a3e">
+                <div class="fltcontainer">
+                    <div><strong style="font-size:20px">Jeu Tic-Tac-Toe:</strong><br>Jeu de logique avec interface et conditions de victoire.
+                        <br><strong>Technologies :</strong>Godot, GDScript, Pixel Art
+                        <br> <a href="https://github.com/diomid-surdu27/Tic-Tac-Toe">Lien GitHub</a></div>
+                    <div><strong style="font-size:20px">CGI – 3 monuments:</strong><br>Modélisation et animation 3D réalistes de monuments locaux.
+                        <br></ber><strong>Technologies :</strong>Blender
+                        <br> <a href="https://github.com/diomid-surdu/CGI-museums">Lien GitHub</a></div>
+                </div>
+                <div class="fltcontainer">
+                    <div><strong style="font-size:20px">Portfolio Web:</strong><br>Site web personnel présentant mon profil et mes projets.
+                        <strong>Technologies :</strong>Godot, GDScript, Pixel Art
+                        <br> <a href="https://diomid-surdu.github.io/">Lien</a></div>
+                    <div><strong style="font-size:20px">Construction d’un PC:</strong><br> Montage et configuration d’un PC gaming, diagnostic matériel et installation Windows.
+                    <br><strong>Technologies :</strong>AMD, NVIDIA, ASUS, Samsung</div>
+                </div>
 
             <h1>Compétences Techniques</h1>
+            <hr style="text-align:left;margin-left:0;width:70%;height:2px;border-width:0;color:#0c6a3e;background-color:#0c6a3e">
             <ul>
                 <li><strong>Programmation :</strong> Python, C++, GDScript, SQL (débutant)</li>
                 <li><strong>Web :</strong> HTML5, CSS (intermédiaire)</li>
@@ -184,6 +211,7 @@
             </ul>
 
             <h1>Compétences Interpersonnelles</h1>
+            <hr style="text-align:left;margin-left:0;width:70%;height:2px;border-width:0;color:#0c6a3e;background-color:#0c6a3e">
             <ul>
                 <li>Travail en équipe et communication</li>
                 <li>Organisation et rigueur</li>
