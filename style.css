@@ -66,6 +66,7 @@
     padding: 1rem 2rem;
     background-color: #212529; /* Header background color */
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    opacity:0.9;
 }
 
 .nav-options {
