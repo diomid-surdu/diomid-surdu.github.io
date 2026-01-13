@@ -1,4 +1,3 @@
-/*fonts begin*/
 
 @font-face {
     font-family: 'Byte';
@@ -56,7 +55,22 @@
     font-size: 2rem;
     color: #333;
 }
-/*fonts end*/
+/*animation*/
+.auto_rotate{
+    animation: AutoRotateAnimation;
+    animation-timeline: view();
+}
+
+@keyframes AutoRotateAnimation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
 
 /*header begin*/
 .header {

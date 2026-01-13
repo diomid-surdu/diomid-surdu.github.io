@@ -16,22 +16,22 @@
         }
         .header {
             display: flex;
-            align-items: center; /* Align logo and links vertically */
-            justify-content: space-between; /* Space between logo and links */
+            align-items: center;
+            justify-content: space-between;
             padding: 1rem 2rem;
-            background-color: #2B1D16; /* Header background color */
-            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+            background-color: #2B1D16;
+            flex-wrap: wrap;
         }
         .nav-options {
             display: flex;
-            gap: .5rem; /* Space between links */
-            flex-wrap: wrap; /* Allow links to wrap on smaller screens */
-            justify-content: flex-start; /* Align links to the left */
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: flex-start;
         }
         .nav-options a {
             text-decoration: none;
             color: #c39b3d;
-            font-size: 1.5rem; /* Adjust font size for better responsiveness */
+            font-size: 1.5rem;
             font-weight: 600;
             transition: color 0.3s ease;
 }
@@ -48,7 +48,7 @@
             max-width: 1200px;
             background: #E8D5B5;
             border-radius: 15px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.419);
             overflow: hidden;
         }
         .profile-pic {
@@ -64,7 +64,7 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         .content {
-            flex: 1; /* Take the remaining space */
+            flex: 1;
             padding: 20px;
         }
         h1, h2, h3 {
@@ -130,16 +130,16 @@
             <nav class="nav-options">
                 <a href="index.html" class="pixelify_font">Accueil</a>
                 <a href="CV.html" class="pixelify_font">CV</a>
-                <a href="#services" class="pixelify_font">Services</a>
-                <a href="#portfolio" class="pixelify_font">Portfolio</a>
-                <a href="#contact" class="pixelify_font">Contact</a>
+                <a href="hobby.html" class="pixelify_font">Mes Hobbies</a>
+                <a href="horaire.html" class="pixelify_font">Portfolio</a>
+                <a href="halte.html" class="pixelify_font">Contact</a>
             </nav>
         </div>
     </header>
     <div class="container">
         <!-- Left :-->
-        <div class="profile-pic">
-            <img src="ressources/moi.jpg" alt="Profile Picture">
+        <div class="profile-pic" >
+            <img src="ressources/moi.jpg" alt="Profile Picture" class = "auto_rotate">
             <h1>Diomid SURDU</h1>
             <h2 style = "font-size:1.1rem;color:#1f3203">Élève</h2>
             <p>Tél: +373 61 291 150</p>

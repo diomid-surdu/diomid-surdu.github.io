@@ -91,57 +91,69 @@
         .hobby-content a:hover {
             color: #004d40;
         }
+
+        /*header begin*/
+        .header {
+            display: flex;
+            align-items: right;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background-color: #5b7236; 
+            flex-wrap: wrap; 
+            opacity:0.85;
+        }
+
+        .nav-options {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .nav-options a {
+            text-decoration: none;
+            color: #adb5bd;
+            font-size: 1.5rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-options a:hover {
+            color: #979083;
+            transform: scale(1.1);
+        }
+
     </style>
 </head>
-<body>
-    <a href="index.html">Inapoi</a>
-    <div class="container">
-        <h1>Hobby-urile mele principale</h1>
 
-        <div class="hobby">
-            <img src="inot.jpg" alt="Inotul">
-            <div class="hobby-content">
-                <h2>Înotul</h2>
-                <p>Înotul sportiv, competițional, sau de performanță, este un sport nautic ce constă în parcurgerea anumitor distanțe în timp cât mai scurt într-un procedeu sportiv de înot, în bazine de înot special amenajate.</p>
-                <a href="https://ro.wikipedia.org/wiki/%C3%8Enot">Mai multe informații despre înot</a>
-            </div>
-        </div>
-
-        <div class="hobby">
-            <img src="calator.jpg" alt="Calatoria">
-            <div class="hobby-content">
-                <h2>Călătoria</h2>
-                <p>Pentru mine, călătoria reprezintă o evadare din cotidian, din rutina de zi cu zi și o nouă ocazie de a explora lucruri noi. Apreciez fiecare călătorie ca pe o nouă experiență, chiar dacă am mai fost în locul respectiv.</p>
-                <a href="https://ro.wikipedia.org/wiki/Turism">Mai multe informații despre turism</a>
-            </div>
-        </div>
-
-        <div class="hobby">
-            <img src="badminton.jpg" alt="Badminton">
-            <div class="hobby-content">
-                <h2>Badminton</h2>
-                <p>Badmintonul este unul dintre cele mai vechi sporturi din lume. Este un sport în care doi jucători, plasați de o parte și cealaltă a unui fileu, încearcă să treacă fluturașul peste fileu în terenul advers.</p>
-                <a href="https://ro.wikipedia.org/wiki/Badminton">Mai multe informații despre badminton</a>
-            </div>
-        </div>
-
-        <div class="hobby">
-            <img src="munte.jpg" alt="Drumetii Montane">
-            <div class="hobby-content">
-                <h2>Drumeții Montane</h2>
-                <p>Drumeția este o activitate în aer liber care constă în mersul pe jos, în medii naturale, de multe ori în zone muntoase sau alte zone pitorești. Adesea oamenii fac astfel de drumeții pe trasee special concepute.</p>
-                <a href="https://ro.wikipedia.org/wiki/Drume%C8%9Bie">Mai multe informații despre drumeții</a>
-            </div>
-        </div>
-
-        <div class="hobby">
-            <img src="ciclism.jpg" alt="Ciclismul">
-            <div class="hobby-content">
-                <h2>Ciclismul</h2>
-                <p>Ciclismul este, în sensul larg al cuvântului, deplasarea pe sol folosind mijloace de transport puse în mișcare de mușchii omului, cu precădere bicicletele. Ca sport, ciclismul este condus de trasee special concepute.</p>
-                <a href="https://ro.wikipedia.org/wiki/Ciclism">Mai multe informații despre ciclism</a>
-            </div>
-        </div>
+<header>
+    <div class="header">
+        <img src="ressources/logo_placeholder.png" style="width:10rem;height:5rem;margin:.2rem;" alt="mon_logo">
+        <nav class="nav-options">
+            <a href="index.html" class="pixelify_font">Accueil</a>
+            <a href="CV.html" class="pixelify_font">CV</a>
+            <a href="hobby.html" class="pixelify_font">Mes Hobbies</a>
+            <a href="horaire.html" class="pixelify_font">Portfolio</a>
+            <a href="halte.html" class="pixelify_font">Contact</a>
+        </nav>
     </div>
-</body>
+</header>
+
+    <main>
+        <body>
+            <div class="container">
+                <h1 class = "coral_font" style="font-size:3rem;">Mes hobbies preférées</h1>
+
+                <div class="hobby">
+                    <img src="calator.jpg" alt="hobby">
+                    <div class="hobby-content">
+                        <h2 class = "pixelify_font">[Hobby]</h2>
+                        <p class = 'pixelify_font'>[Description]</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </body>
+    </main>
 </html>
