@@ -77,23 +77,23 @@
     display: flex;
     align-items: center; /* Align logo and links vertically */
     justify-content: space-between; /* Space between logo and links */
-    padding: 1rem 2rem;
-    background-color: #212529; /* Header background color */
+    padding: .1rem 2rem;
+    background-color: #050505; /* Header background color */
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
     opacity:0.9;
 }
 
 .nav-options {
     display: flex;
-    gap: 3.5rem; /* Space between links */
-    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
-    justify-content: flex-start; /* Align links to the left */
+    gap: 3.5rem; /* sppace between links*/
+    flex-wrap: wrap; /*links to wrap on smaller screens */
+    justify-content: flex-start; /*align links to the left */
 }
 
 .nav-options a {
     text-decoration: none;
     color: #adb5bd;
-    font-size: 1.5rem; /* Adjust font size for better responsiveness */
+    font-size: 1.5rem; /*ont size */
     font-weight: 600;
     transition: color 0.3s ease;
 }
