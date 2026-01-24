@@ -17,6 +17,19 @@
             background: linear-gradient(135deg, #dbf9c8, #114d01);
             color: #333;
         }
+        .header{
+            background-color:green;
+        }
+        .nav-options {
+            display: flex;
+            gap: 0.98rem;
+            }
+        .nav-options a{
+            color:#001605
+        }
+        .nav-options a:hover{
+            color:#dbf9c8;
+        }
         a {
             text-decoration: none;
             color: #00796b;
@@ -91,39 +104,6 @@
         .hobby-content a:hover {
             color: #004d40;
         }
-
-        /*header begin*/
-        .header {
-            display: flex;
-            align-items: right;
-            justify-content: space-between;
-            padding: .1rem 2rem;
-            background-color: #5b7236; 
-            flex-wrap: wrap; 
-            opacity:0.85;
-        }
-
-        .nav-options {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-        }
-
-        .nav-options a {
-            text-decoration: none;
-            color: #adb5bd;
-            font-size: 1.5rem;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        .nav-options a:hover {
-            color: #979083;
-            transform: scale(1.1);
-            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-        }
-
     </style>
 </head>
 
@@ -135,7 +115,7 @@
             <a href="CV.html" class="pixelify_font">CV</a>
             <a href="parcours.html" class="pixelify_font">Parcours</a>
             <a href="hobby.html" class="pixelify_font">Mes Hobbies</a>
-            <a href="contacts.html" class="pixelify_font">Contacts</a>
+            <a href="contacts.html" class="pixelify_font" style="margin-right:1px;">Contacts</a>
         </nav>
     </div>
 </header>

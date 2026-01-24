@@ -1,167 +1,194 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orar Clasa XI "B"</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
     <style>
         @font-face {
             font-family: 'Jacquard12';
             src: url('diomid-surdu.github.io/fonts/Jacquard12.ttf');
         }
+
+        /* Body styling */
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #f0f4f8, #d9e4f5);
-            color: #333;
+            background: linear-gradient(135deg, #f0f4f8, #d9e4f5); /* Gradient background */
+            color: #333; /* Default text color */
         }
-        a {
-            text-decoration: none;
-            color: #00796b;
-            font-weight: bold;
-            margin: 20px;
-            display: inline-block;
+        .header{
+            background-color:#00796b;
+            color:#004d40
         }
-        a:hover {
-            color: #004d40;
+        
+        /* Main container styling */
+        .container {
+            margin: 50px auto; /* Centers the container vertically and horizontally */
+            width: 90%; /* Sets the width to 90% of the viewport */
+            max-width: 1200px; /* Limits the maximum width */
+            background: #ffffff; /* White background */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+            padding: 20px; /* Adds space inside the container */
         }
-        h1, h2 {
-            text-align: center;
-            margin: 20px 0;
-        }
-        h1 {
-            font-size: 2.5rem;
-            color: #00796b;
-        }
-        h2 {
-            font-size: 1.5rem;
-            color: #004d40;
-            font-family: 'Jacquard12', sans-serif;
-        }
-        table {
-            margin: 50px auto;
-            width: 90%;
-            max-width: 1200px;
-            background: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 15px;
-            text-align: center;
-        }
-        th {
-            background: #00796b;
-            color: #ffffff;
-            font-size: 1.2rem;
-        }
-        td {
-            background: #e3f2fd;
-            color: #333;
-            font-size: 1rem;
-        }
-        tr:nth-child(even) td {
-            background: #f1f8e9;
-        }
-        .day-header {
-            background: #004d40;
-            color: #ffffff;
-            font-size: 1.5rem;
-        }
-        .subject {
-            font-weight: bold;
-            color: #00796b;
-        }
+
+        /* Footer styling */
         .footer {
-            text-align: center;
-            margin: 20px 0;
+            text-align: center; /* Centers the content */
+            margin: 20px 0; /* Adds space above and below the footer */
+            background: #00796b; /* Footer background color */
+            color: #ffffff; /* Footer text color */
+            padding: 10px; /* Adds space inside the footer */
+            border-radius: 10px; /* Rounds the corners */
         }
-        .footer img {
-            margin: 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+        .footer a {
+            color: #fbeeba; /* Link color in the footer */
+            text-decoration: none; /* Removes underline from links */
+            font-weight: bold; /* Makes the text bold */
+        }
+
+        .footer a:hover {
+            color: #ff8400; /* Changes link color on hover */
+        }
+
+        /* Table styling */
+        table {
+            margin: 20px auto; /* Centers the table */
+            width: 100%; /* Makes the table take up the full width of the container */
+            border-collapse: collapse; /* Removes gaps between table cells */
+        }
+
+        th, td {
+            padding: 15px; /* Adds space inside table cells */
+            text-align: center; /* Centers the text */
+        }
+
+        th {
+            background: #00796b; /* Header background color */
+            color: #ffffff; /* Header text color */
+            font-size: 1.2rem; /* Header font size */
+        }
+
+        td {
+            background: #e3f2fd; /* Cell background color */
+            color: #333; /* Cell text color */
+            font-size: 1rem; /* Cell font size */
+        }
+
+        tr:nth-child(even) td {
+            background: #f1f8e9; /* Alternating row background color */
+        }
+
+        .day-header {
+            background: #004d40; /* Day header background color */
+            color: #ffffff; /* Day header text color */
+            font-size: 1.5rem; /* Day header font size */
+        }
+
+        .subject {
+            font-weight: bold; /* Makes subject names bold */
+            color: #00796b; /* Subject text color */
         }
     </style>
 </head>
 <body>
-    <a href="index.html">Inapoi</a>
-    <h1>Orarul Lecțiilor Clasa XI "B"</h1>
-    <table>
-        <tr>
-            <th></th>
-            <th class="day-header">LUNI</th>
-            <th class="day-header">MARȚI</th>
-            <th class="day-header">MIERCURI</th>
-            <th class="day-header">JOI</th>
-            <th class="day-header">VINERI</th>
-        </tr>
-        <tr>
-            <th>1</th>
-            <td class="subject">Chimia</td>
-            <td class="subject">Engleza</td>
-            <td class="subject">Franceza</td>
-            <td class="subject">Geografia</td>
-            <td class="subject">L engleza</td>
-        </tr>
-        <tr>
-            <th>2</th>
-            <td class="subject">Ed fizica</td>
-            <td class="subject">Dezvoltare personală</td>
-            <td class="subject">Romana</td>
-            <td class="subject">Limba Engleză</td>
-            <td class="subject">Info</td>
-        </tr>
-        <tr>
-            <th>3</th>
-            <td class="subject">Disciplina</td>
-            <td class="subject">Matematica</td>
-            <td class="subject">Bliologia</td>
-            <td class="subject">Limba Franceză</td>
-            <td class="subject">Chimia</td>
-        </tr>
-        <tr>
-            <th>4</th>
-            <td class="subject">Matematica</td>
-            <td class="subject">Matematica</td>
-            <td class="subject">Geografia</td>
-            <td class="subject">Bio</td>
-            <td class="subject">Matematica</td>
-        </tr>
-        <tr>
-            <th>5</th>
-            <td class="subject">Limba Romana</td>
-            <td class="subject">Fizica</td>
-            <td class="subject">Istoria</td>
-            <td class="subject">Fizica</td>
-            <td class="subject">Biologia</td>
-        </tr>
-        <tr>
-            <th>6</th>
-            <td class="subject">Limba Romana</td>
-            <td class="subject">Fizica</td>
-            <td class="subject">Ed fizica</td>
-            <td class="subject">Mate</td>
-            <td class="subject"></td>
-        </tr>
-        <tr>
-            <th>7</th>
-            <td class="subject">Istoria</td>
-            <td class="subject">Informatica</td>
-            <td class="subject">Ed societate</td>
-            <td class="subject">L romana</td>
-            <td class="subject"></td>
-        </tr>
-    </table>
+    <!-- Header -->
+    <header>
+        <div class="header">
+            <img src="ressources/logo_placeholder.png" style="width:10rem;height:5rem;margin:.2rem" alt="mon_logo">
+            <nav class="nav-options">
+                <a href="index.html" class="pixelify_font">Accueil</a>
+                <a href="CV.html" class="pixelify_font">CV</a>
+                <a href="parcours.html" class="pixelify_font">Parcours</a>
+                <a href="hobby.html" class="pixelify_font">Mes Hobbies</a>
+                <a href="contacts.html" class="pixelify_font">Contacts</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main container -->
+    <div class="container">
+        <h1>Orarul Lecțiilor Clasa XI "B"</h1>
+        <table>
+            <tr>
+                <th></th>
+                <th class="day-header">LUNI</th>
+                <th class="day-header">MARȚI</th>
+                <th class="day-header">MIERCURI</th>
+                <th class="day-header">JOI</th>
+                <th class="day-header">VINERI</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td class="subject">Chimia</td>
+                <td class="subject">Engleza</td>
+                <td class="subject">Franceza</td>
+                <td class="subject">Geografia</td>
+                <td class="subject">L engleza</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="subject">Ed fizica</td>
+                <td class="subject">Dezvoltare personală</td>
+                <td class="subject">Romana</td>
+                <td class="subject">Limba Engleză</td>
+                <td class="subject">Info</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="subject">Disciplina</td>
+                <td class="subject">Matematica</td>
+                <td class="subject">Bliologia</td>
+                <td class="subject">Limba Franceză</td>
+                <td class="subject">Chimia</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="subject">Matematica</td>
+                <td class="subject">Matematica</td>
+                <td class="subject">Geografia</td>
+                <td class="subject">Bio</td>
+                <td class="subject">Matematica</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="subject">Limba Romana</td>
+                <td class="subject">Fizica</td>
+                <td class="subject">Istoria</td>
+                <td class="subject">Fizica</td>
+                <td class="subject">Biologia</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="subject">Limba Romana</td>
+                <td class="subject">Fizica</td>
+                <td class="subject">Ed fizica</td>
+                <td class="subject">Mate</td>
+                <td class="subject"></td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="subject">Istoria</td>
+                <td class="subject">Informatica</td>
+                <td class="subject">Ed societate</td>
+                <td class="subject">L romana</td>
+                <td class="subject"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Footer -->
     <div class="footer">
         <h2>Mai multe informații pe:</h2>
         <a href="https://asachi.md/orar/orarul-lectiilor/clase-liceale/">Orarul Lecțiilor - Liceul Teoretic Gheorghe Asachi</a>
         <div>
-            <img src="gheorghe.jpg" alt="Gheorghe Asachi" width="400">
-            <img src="asachi.jpg" alt="Asachi" width="400">
-            <img src="volvo.jpg" alt="Volvo" width="400">
+            <img src="gheorghe.jpg" alt="Gheorghe Asachi" width="200">
+            <img src="asachi.jpg" alt="Asachi" width="200">
+            <img src="volvo.jpg" alt="Volvo" width="200">
         </div>
     </div>
 </body>

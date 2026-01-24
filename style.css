@@ -100,7 +100,8 @@
 
 .nav-options a:hover {
     color: #979083;
-    transform: scale(1.1);
+    transform: scale(1.2);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* Media Query for Smaller Screens */
