@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hobby-uri</title>
+    <title>Mes Hobbies</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
@@ -11,225 +11,246 @@
             font-family: 'Jacquard12';
             src: url('diomid-surdu.github.io/fonts/Jacquard12.ttf');
         }
+
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(180deg, #C5D89D, #628141);
+            background-image: url("ressources/stars.gif");
+            background-repeat:no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
         }
-        .header{
-            background-color:#3B4953;
+        
+        .main-bg{
+            height:100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:cover;
+
         }
+
+        .img1 {background-image:url("ressources/vid.png")}
+        .img2 {background-image:url("ressources/neon_future.png")}
+
+        .header {
+            background-image: url("ressources/neon_future.png");
+            opacity:.95;
+        }
+
         .nav-options {
             display: flex;
-            gap: 0.98rem;
-            }
-        .nav-options a{
-            color:#C5D89D
+            gap: 3.5rem;
         }
-        .nav-options a:hover{
-            color:#E9762B;
+
+        .nav-options a {
+            color: #d4ca5a;
         }
-        a {
-            text-decoration: none;
-            color: #00796b;
-            font-weight: bold;
-            margin: 20px;
-            display: inline-block;
+
+        .nav-options a:hover {
+            color: #E9762B;
         }
-        a:hover {
-            color: #004d40;
-        }
-        h1, h2, h3 {
-            text-align: center;
-            margin: 20px 0;
-        }
-        h1 {
-            font-size: 2.5rem;
-            color: #00796b;
-        }
-        h2 {
-            font-size: 1.8rem;
-            color: #004d40;
-            font-family: 'Jacquard12', sans-serif;
-        }
-        h3 {
-            font-size: 1.2rem;
-            color: #333;
-        }
+
         .container {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #f0e39180;
-            border-radius: 15px;
+            max-width: 100%;
+            margin: 0px auto;
+            padding: 0px;
+            border-radius: 0px;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
         }
+
         .hobby {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            margin-bottom: 40px;
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 20px;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+            opacity: 0; /* Initially hidden */
+            transform: translateY(200px); /* Start slightly below */
+            transition: opacity 0.9s ease, transform 0.9s ease; /* Smooth animation */
         }
-        .hobby:last-child {
-            border-bottom: none;
+
+        .hobby.visible {
+            opacity: 1; /* Fully visible */
+            transform: translateY(0); /* Move to original position */
         }
+
         .hobby img {
             width: 400px;
             height: 250px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             margin-right: 20px;
+            transition: transform 0.3s ease;
         }
+
+        .hobby img:hover {
+            transform: scale(1.1);
+        }
+
         .hobby-content {
             flex: 1;
         }
+
         .hobby-content h2 {
             margin-bottom: 10px;
         }
+
         .hobby-content p {
             font-size: 1rem;
             line-height: 1.6;
             margin-bottom: 10px;
         }
-        .hobby-content a {
-            display: inline-block;
-            margin-top: 10px;
-            color: #00796b;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        .hobby-content a:hover {
-            color: #004d40;
+        .h5{
+            opacity:0;
         }
     </style>
 </head>
-
-<header>
-    <div class="header">
-        <img src="ressources/logo_placeholder.png" style="width:10rem;height:5rem;margin:.2rem;" alt="mon_logo">
-        <nav class="nav-options">
-            <a href="index.html" class="pixelify_font">Accueil</a>
-            <a href="CV.html" class="pixelify_font">CV</a>
-            <a href="parcours.html" class="pixelify_font">Parcours</a>
-            <a href="hobby.html" class="pixelify_font">Mes Hobbies</a>
-            <a href="contacts.html" class="pixelify_font" style="margin-right:1px;">Contacts</a>
-        </nav>
-    </div>
-</header>
+<body>
+    <header>
+        <div class="header">
+            <img src="ressources/neon_future.png" style="width:10rem;height:5rem;margin:.2rem; opacity:.6" alt="mon_logo">
+            <nav class="nav-options">
+                <a href="index.html" class="pixelify_font">Accueil</a>
+                <a href="CV.html" class="pixelify_font">CV</a>
+                <a href="parcours.html" class="pixelify_font">Parcours</a>
+                <a href="hobby.html" class="pixelify_font">Mes Hobbies</a>
+                <a href="contacts.html" class="pixelify_font" style="margin-right:1px;">Contacts</a>
+            </nav>
+        </div>
+    </header>
 
     <main>
-        <body>
-
-
-            <div class="container">
-
-                <h1 class = "coral_font" style="font-size:3rem;">Mes Hobbies</h1>
-                
-                <div class="hobby">
-                    
-                    <img src="ressources/wd.jpg" alt="hobby">
-                    <div class="hobby-content">
-                        <h2 class = "pixelify_font">Musique</h2>
-                        <p class = 'pixelify_font'>[Description]</p>
-                    </div>
-                </div>
-
-            </div>
-
-                <div class="container">
-                    <h1 class="coral_font" style="font-size:3rem;">Mes Hobbies</h1>
+        <div class="main-bg img1">
+            <h2 class="pixelify_font" style="color:#ffe388;text-align:center;">"L'émerveillement est le commencement de la sagesse"</h2></div>
+        <div class="container"><div class="main-bg img1">
         
-                    <!-- Hobby: Musique -->
-                    <div class="hobby">
+            <h1 class="pixelify_font" style="font-size:5rem;color:#f09c1d;margin-bottom:20px;">Mes Hobbies</h1>
+            </div>
+            
+
+
+            <div class="main-bg img2" style="position: relative; overflow: hidden; padding: 50px 0;">
+                <div style="
+                    position: absolute;
+                    top: 0; left: 0; right: 0; bottom: 0;
+                    background-image: inherit;
+                    background-size: cover;
+                    background-position: center;
+                    filter: blur(8px) brightness(0.5);
+                    z-index: 1;">
+                </div>
+            
+                <div class="hobby" style="position: relative; z-index: 2; border-radius: 15px; padding: 20px; width: 70%; margin: 0 auto;">
+                    <div class="container" style="width:100%;">
+                        <h2 class="pixelify_font">Musique</h2>
                         <img src="ressources/guitar.jpg" alt="Guitar">
                         <img src="ressources/violin.jpg" alt="Violin">
                         <img src="ressources/music.jpg" alt="Music">
                         <div class="hobby-content">
-                            <h2 class="pixelify_font">Musique</h2>
+                            
                             <p class="pixelify_font">Je joue de la guitare et du violon, et je compose de la musique.</p>
                         </div>
                     </div>
-        
-                    <!-- Hobby: Gym -->
-                    <div class="hobby">
-                        <img src="ressources/gym.jpg" alt="Gym">
-                        <img src="ressources/weights.jpg" alt="Weights">
-                        <img src="ressources/cardio.jpg" alt="Cardio">
-                        <div class="hobby-content">
-                            <h2 class="pixelify_font">Gym</h2>
-                            <p class="pixelify_font">Je m'entraîne régulièrement pour rester en forme et améliorer ma santé.</p>
-                        </div>
-                    </div>
-        
-                    <!-- Hobby: Roller Blades and Ice Skating -->
-                    <div class="hobby">
-                        <img src="ressources/roller_blades.jpg" alt="Roller Blades">
-                        <img src="ressources/ice_skating.jpg" alt="Ice Skating">
-                        <img src="ressources/skating.jpg" alt="Skating">
-                        <div class="hobby-content">
-                            <h2 class="pixelify_font">Roller Blades et Patinage</h2>
-                            <p class="pixelify_font">J'adore faire du roller et du patinage sur glace.</p>
-                        </div>
-                    </div>
-        
-                    <!-- Hobby: Skiing -->
-                    <div class="hobby">
-                        <img src="ressources/skiing.jpg" alt="Skiing">
-                        <img src="ressources/mountain_ski.jpg" alt="Mountain Ski">
-                        <img src="ressources/snow.jpg" alt="Snow">
-                        <div class="hobby-content">
-                            <h2 class="pixelify_font">Ski</h2>
-                            <p class="pixelify_font">Le ski est une activité que je pratique en hiver.</p>
-                        </div>
-                    </div>
-        
-                    <!-- Hobby: Programming -->
-                    <div class="hobby">
-                        <img src="ressources/programming.jpg" alt="Programming">
-                        <img src="ressources/code.jpg" alt="Code">
-                        <img src="ressources/keyboard.jpg" alt="Keyboard">
-                        <div class="hobby-content">
-                            <h2 class="pixelify_font">Programmation</h2>
-                            <p class="pixelify_font">Je développe des projets numériques et j'apprends de nouvelles technologies.</p>
-                        </div>
-                    </div>
-        
-                    <!-- Hobby: Origami -->
-                    <div class="hobby">
-                        <img src="ressources/origami.jpg" alt="Origami">
-                        <img src="ressources/paper_art.jpg" alt="Paper Art">
-                        <img src="ressources/folding.jpg" alt="Folding">
-                        <div class="hobby-content">
-                            <h2 class="pixelify_font">Origami</h2>
-                            <p class="pixelify_font">Je crée des formes artistiques en pliant du papier.</p>
-                        </div>
-                    </div>
-        
-                    <!-- Hobby: Rubik's Cube -->
-                    <div class="hobby">
-                        <img src="ressources/rubiks_cube.jpg" alt="Rubik's Cube">
-                        <img src="ressources/cube.jpg" alt="Cube">
-                        <img src="ressources/puzzle.jpg" alt="Puzzle">
-                        <div class="hobby-content">
-                            <h2 class="pixelify_font">Rubik's Cube</h2>
-                            <p class="pixelify_font">Je résous des Rubik's Cubes pour améliorer ma logique et ma concentration.</p>
-                        </div>
-                    </div>
-        
-                    <!-- Hobby: Space Exploration -->
-                    <div class="hobby">
-                        <img src="ressources/space.jpg" alt="Space">
-                        <img src="ressources/astronomy.jpg" alt="Astronomy">
-                        <img src="ressources/rocket.jpg" alt="Rocket">
-                        <div class="hobby-content">
-                            <h2 class="pixelify_font">Exploration Spatiale</h2>
-                            <p class="pixelify_font">Je suis passionné par l'astronomie et l'exploration de l'univers.</p>
-                        </div>
-                    </div>
                 </div>
-            
-        </body>
+            </div>
+
+
+            <!-- Hobby: Gym -->
+            <div class="hobby">
+                <img src="ressources/gym.jpg" alt="Gym">
+                <img src="ressources/weights.jpg" alt="Weights">
+                <img src="ressources/cardio.jpg" alt="Cardio">
+                <div class="hobby-content">
+                    <h2 class="pixelify_font">Gym</h2>
+                    <p class="pixelify_font">Je m'entraîne régulièrement pour rester en forme et améliorer ma santé.</p>
+                </div>
+            </div>
+
+            <!-- Hobby: Roller Blades and Ice Skating -->
+            <div class="hobby">
+                <img src="ressources/roller_blades.jpg" alt="Roller Blades">
+                <img src="ressources/ice_skating.jpg" alt="Ice Skating">
+                <img src="ressources/skating.jpg" alt="Skating">
+                <div class="hobby-content">
+                    <h2 class="pixelify_font">Roller Blades et Patinage</h2>
+                    <p class="pixelify_font">J'adore faire du roller et du patinage sur glace.</p>
+                </div>
+            </div>
+
+            <!-- Hobby: Skiing -->
+            <div class="hobby">
+                <img src="ressources/skiing.jpg" alt="Skiing">
+                <img src="ressources/mountain_ski.jpg" alt="Mountain Ski">
+                <img src="ressources/snow.jpg" alt="Snow">
+                <div class="hobby-content">
+                    <h2 class="pixelify_font">Ski</h2>
+                    <p class="pixelify_font">Le ski est une activité que je pratique en hiver.</p>
+                </div>
+            </div>
+
+            <!-- Hobby: Programming -->
+            <div class="hobby">
+                <img src="ressources/programming.jpg" alt="Programming">
+                <img src="ressources/code.jpg" alt="Code">
+                <img src="ressources/keyboard.jpg" alt="Keyboard">
+                <div class="hobby-content">
+                    <h2 class="pixelify_font">Programmation</h2>
+                    <p class="pixelify_font">Je développe des projets numériques et j'apprends de nouvelles technologies.</p>
+                </div>
+            </div>
+
+            <!-- Hobby: Origami -->
+            <div class="hobby">
+                <img src="ressources/origami.jpg" alt="Origami">
+                <img src="ressources/paper_art.jpg" alt="Paper Art">
+                <img src="ressources/folding.jpg" alt="Folding">
+                <div class="hobby-content">
+                    <h2 class="pixelify_font">Origami</h2>
+                    <p class="pixelify_font">Je crée des formes artistiques en pliant du papier.</p>
+                </div>
+            </div>
+
+            <!-- Hobby: Rubik's Cube -->
+            <div class="hobby">
+                <img src="ressources/rubiks_cube.jpg" alt="Rubik's Cube">
+                <img src="ressources/cube.jpg" alt="Cube">
+                <img src="ressources/puzzle.jpg" alt="Puzzle">
+                <div class="hobby-content">
+                    <h2 class="pixelify_font">Rubik's Cube</h2>
+                    <p class="pixelify_font">Je résous des Rubik's Cubes pour améliorer ma logique et ma concentration.</p>
+                </div>
+            </div>
+
+            <!-- Hobby: Space Exploration -->
+            <div class="hobby">
+                <img src="ressources/space.jpg" alt="Space">
+                <img src="ressources/astronomy.jpg" alt="Astronomy">
+                <img src="ressources/rocket.jpg" alt="Rocket">
+                <div class="hobby-content">
+                    <h2 class="pixelify_font">Exploration Spatiale</h2>
+                    <p class="pixelify_font">Je suis passionné par l'astronomie et l'exploration de l'univers.</p>
+                </div>
+            </div>
+        </div>
+    
     </main>
+
+    <script>
+        // IntersectionObserver for scroll animations
+        const hobbies = document.querySelectorAll('.hobby');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        hobbies.forEach((hobby) => {
+            observer.observe(hobby);
+        });
+    </script>
+</body>
 </html>
