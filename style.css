@@ -60,11 +60,11 @@
     width:200px;
     height:230px;
     transition: transform 3s ease 0s;
-
+    
 }
 
 .icn:hover{
-    transform:rotate(135deg);
+    transform:rotate(360deg);
 }
 
 

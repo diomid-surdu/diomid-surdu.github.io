@@ -32,6 +32,7 @@
 
         .img1 {background-image:url("ressources/vid.png")}
         .img2 {background-image:url("ressources/neon_future.png")}
+        .img3 {background-image:url("ressources/vid_blur.png")}
 
         .header {
             background-image: url("ressources/neon_future.png");
@@ -104,12 +105,23 @@
         .h5{
             opacity:0;
         }
+
+        .img_blur{
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: inherit;
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px) brightness(0.5);
+            z-index: 1;
+
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="header">
-            <img src="ressources/neon_future.png" style="width:10rem;height:5rem;margin:.2rem; opacity:.6" alt="mon_logo">
+            <img class="icn" src="ressources/neon_future.png" style="width:10rem;height:5rem;margin:.2rem; opacity:.6" alt="mon_logo">
             <nav class="nav-options">
                 <a href="index.html" class="pixelify_font">Accueil</a>
                 <a href="CV.html" class="pixelify_font">CV</a>
@@ -121,7 +133,7 @@
     </header>
 
     <main>
-        <div class="main-bg img1">
+        <div class="main-bg img3">
             <h2 class="pixelify_font" style="color:#ffe388;text-align:center;">"L'émerveillement est le commencement de la sagesse"</h2></div>
         <div class="container"><div class="main-bg img1">
         
@@ -131,6 +143,7 @@
 
 
             <div class="main-bg img2" style="position: relative; overflow: hidden; padding: 50px 0;">
+                
                 <div style="
                     position: absolute;
                     top: 0; left: 0; right: 0; bottom: 0;
@@ -142,6 +155,7 @@
                 </div>
             
                 <div class="hobby" style="position: relative; z-index: 2; border-radius: 15px; padding: 20px; width: 70%; margin: 0 auto;">
+                    
                     <div class="container" style="width:100%;">
                         <h2 class="pixelify_font">Musique</h2>
                         <img src="ressources/guitar.jpg" alt="Guitar">
