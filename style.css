@@ -119,20 +119,32 @@
 }
 /*header end*/
 
-.parallax{
-    height:200px;
-    width:200px;
-    background-attachment:fixed;
+
+
+@keyframes backgroundTransition {
+    0% {
+        background-image: url("ressources/neon_future.png");
+    }
+    50% {
+        background-image: url("ressources/vlt_blk.png");
+    }
+    100% {
+        background-image: url("ressources/neon_future.png");
+    }
+}
+/*
+.img2 {
+    animation: backgroundTransition 10s infinite; 
     background-size: cover;
-    background-position:center;
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    scroll-snap-align: start;
+    background-position: center;
 }
-.parallax:nth-child(1){
-    background-image: url("pc_hk.gif");
-}
-.parallax:nth-child(2){
-    background-image: url("wd.jpg");
+
+.img4 {
+    animation: backgroundTransition 10s infinite;
+    background-size: cover;
+    background-position: center;
+}*/
+
+html {
+    scroll-behavior: smooth;
 }
