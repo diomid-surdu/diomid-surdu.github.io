@@ -18,7 +18,15 @@
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #f0f4f8, #d9e4f5);
             color: #333; 
+            background-image: url("ressources/wd.jpg");
+            background-repeat:no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
         }
+
+
+
         .header{
             background-color:#64acce87;
         }
@@ -30,55 +38,119 @@
             color: #000958;
         }
         
-        /* Main container styling */
-        .container {
-            margin: 50px auto; /* Centers the container vertically and horizontally */
-            width: 90%; /* Sets the width to 90% of the viewport */
-            max-width: 1200px; /* Limits the maximum width */
-            background: #ffffff; /* White background */
-            border-radius: 15px; /* Rounded corners */
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
-            padding: 20px; /* Adds space inside the container */
-        }
+        /* timeline */
 
-        /* Table styling */
-        table {
-            margin: 20px auto; /* Centers the table */
-            width: 100%; /* Makes the table take up the full width of the container */
-            border-collapse: collapse; /* Removes gaps between table cells */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 50px 0;
         }
-
-        th, td {
-            padding: 15px; /* Adds space inside table cells */
-            text-align: center; /* Centers the text */
+    
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            background: #00f295;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -4px;
+            filter: blur(8px) brightness(0.5);
         }
-
-        th {
-            background: #00796b; /* Header background color */
-            color: #ffffff; /* Header text color */
-            font-size: 1.2rem; /* Header font size */
+    
+        .timeline-item {
+            padding: 0px;
+            position: relative;
+            width: 45%; /* Adjusted width for better spacing */
+            background: #cbffdfb8;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 100px 0; /* Increased spacing between items */
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            opacity: 0;
+            transform: translateY(200px);
+            transition: opacity 2s ease, transform 2s ease;
         }
-
-        td {
-            background: #e3f2fd; /* Cell background color */
-            color: #333; /* Cell text color */
-            font-size: 1rem; /* Cell font size */
+    
+        .timeline-item.left {
+            left: 0;
+            margin-left: 0;
+            text-align: right; /* Align text to the right for left items */
         }
-
-        tr:nth-child(even) td {
-            background: #f1f8e9; /* Alternating row background color */
+    
+        .timeline-item.right {
+            left: 50%;
+            margin-left: 5%; /* Add spacing between the center line and the item */
+            text-align: left; /* Align text to the left for right items */
         }
-
-        .day-header {
-            background: #004d40; /* Day header background color */
-            color: #ffffff; /* Day header text color */
-            font-size: 1.5rem; /* Day header font size */
+    
+        .timeline-item .content {
+            padding: 20px;
+            position: relative;
         }
-
-        .subject {
-            font-weight: bold; /* Makes subject names bold */
-            color: #00796b; /* Subject text color */
+    
+        /* Add pointy ends to the containers */
+        .timeline-item.left::after,
+        .timeline-item.right::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border-style: solid;
+            border-width: 15px;
+            width: 0;
+            height: 0;
         }
+    
+        .timeline-item.left::after {
+            right: -15px;
+            border-color: transparent transparent transparent #09410e;
+        }
+    
+        .timeline-item.right::after {
+            left: -15px;
+            border-color: transparent #092f13 transparent transparent;
+        }
+    
+        .timeline-item h2 {
+            font-size: 1.7rem;
+            color: #00796b;
+        }
+    
+        .timeline-item p {
+            font-size: 1rem;
+            color: #555;
+        }
+    
+        /* Animation */
+        .timeline-item.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    
+        /* Media Query for Smaller Screens */
+        @media (max-width: 768px) {
+            .timeline-item {
+                width: 100%;
+                margin-left: 0;
+                text-align: left; /* Align text to the left for smaller screens */
+            }
+    
+            .timeline-item.right {
+                left: 0;
+            }
+    
+            .timeline::before {
+                left: 20px;
+            }
+    
+            .timeline-item.left::after,
+            .timeline-item.right::after {
+                display: none; /* Remove pointy ends on smaller screens */
+            }
+        }
+        
     </style>
 </head>
 <body>
@@ -97,85 +169,191 @@
     </header>
 
     <!-- Main container -->
-    <div class="container">
-        <h1>Orarul Lecțiilor Clasa XI "B"</h1>
-        <table>
-            <tr>
-                <th></th>
-                <th class="day-header">LUNI</th>
-                <th class="day-header">MARȚI</th>
-                <th class="day-header">MIERCURI</th>
-                <th class="day-header">JOI</th>
-                <th class="day-header">VINERI</th>
-            </tr>
-            <tr>
-                <th>1</th>
-                <td class="subject">Chimia</td>
-                <td class="subject">Engleza</td>
-                <td class="subject">Franceza</td>
-                <td class="subject">Geografia</td>
-                <td class="subject">L engleza</td>
-            </tr>
-            <tr>
-                <th>2</th>
-                <td class="subject">Ed fizica</td>
-                <td class="subject">Dezvoltare personală</td>
-                <td class="subject">Romana</td>
-                <td class="subject">Limba Engleză</td>
-                <td class="subject">Info</td>
-            </tr>
-            <tr>
-                <th>3</th>
-                <td class="subject">Disciplina</td>
-                <td class="subject">Matematica</td>
-                <td class="subject">Bliologia</td>
-                <td class="subject">Limba Franceză</td>
-                <td class="subject">Chimia</td>
-            </tr>
-            <tr>
-                <th>4</th>
-                <td class="subject">Matematica</td>
-                <td class="subject">Matematica</td>
-                <td class="subject">Geografia</td>
-                <td class="subject">Bio</td>
-                <td class="subject">Matematica</td>
-            </tr>
-            <tr>
-                <th>5</th>
-                <td class="subject">Limba Romana</td>
-                <td class="subject">Fizica</td>
-                <td class="subject">Istoria</td>
-                <td class="subject">Fizica</td>
-                <td class="subject">Biologia</td>
-            </tr>
-            <tr>
-                <th>6</th>
-                <td class="subject">Limba Romana</td>
-                <td class="subject">Fizica</td>
-                <td class="subject">Ed fizica</td>
-                <td class="subject">Mate</td>
-                <td class="subject"></td>
-            </tr>
-            <tr>
-                <th>7</th>
-                <td class="subject">Istoria</td>
-                <td class="subject">Informatica</td>
-                <td class="subject">Ed societate</td>
-                <td class="subject">L romana</td>
-                <td class="subject"></td>
-            </tr>
-        </table>
+       <!-- Timeline -->
+       <div class="timeline">
+        <!-- école elem -->
+ 
+<!-- Maths -->
+<div class="timeline-item right">
+    <div class="content">
+        <h2 style="text-align:left;font-size:30px">Maths d'égal à l'égal</h2>
+        <h2 style="font-size:20px;color:#003148">5 Mars - Présent, 2026</h2>
+        <p>Volonariat</p>
+        <img src="ressources/parcours_imgs/maths.png" width="500">
+        <a href="https://ajutauncoleg.md/" style="color:rgb(3, 26, 11)"><b>Site du programme: </b>www.ajutauncoleg.md</a>
     </div>
+</div>
+
+    <!-- Cambridge -->
+    <div class="timeline-item left">
+        <div class="content">
+            <h2 style="text-align:right;font-size:30px">Cambridge Certification B2</h2>
+            <h2 style="font-size:20px;color:#003148">19 Mars, 2026</h2>
+            <p>Score: 179/190, B2 Grade B</p>
+            <img src="ressources/parcours_imgs/cambridge.png" width="500">
+        </div>
+    </div>
+
+    <!-- colloque -->
+    <div class="timeline-item right">
+        <div class="content">
+            <h2 style="text-align:right;font-size:30px">Colloque Linguistique-Littéraire</h2>
+            <h2 style="font-size:20px;color:#003148">27 Février, 2026</h2>
+            <p>Lauréat de la seconde place.</p>
+            <img src="ressources/parcours_imgs/colloque.png" width="500">
+        </div>
+    </div>
+
+    <!-- Delf -->
+    <div class="timeline-item left">
+        <div class="content">
+            <h2 style="text-align:left;font-size:30px">DELF Certification B2</h2>
+            <h2 style="font-size:20px;color:#003148">21 Décembre, 2025</h2>
+            <p>Score: 82/100</p>
+            <img src="ressources/parcours_imgs/delf_recto.png" width="500">
+            <img src="ressources/parcours_imgs/delf_verso.png" width="500">
+        </div>
+    </div>
+ 
+
+     <!-- DB -->
+     <div class="timeline-item right">
+        <div class="content">
+            <h2 style="text-align:left;font-size:30px">Certification Database</h2>
+            <h2 style="font-size:20px;color:#003148">21 August, 2025</h2>
+            <p>Certification IT Specialist</p>
+            <img src="ressources/parcours_imgs/DB.png" width="500">
+        </div>
+    </div>  
+
+    <!-- Device -->
+    <div class="timeline-item right">
+        <div class="content">
+            <h2 style="text-align:left;font-size:30px">Certification Device configuration et management.</h2>
+            <h2 style="font-size:20px;color:#003148">7 August, 2025</h2>
+            <p>Certification IT Specialist</p>
+            <img src="ressources/parcours_imgs/dec.png" width="500">
+        </div>
+    </div>
+
+    <!-- Python -->
+    <div class="timeline-item right">
+        <div class="content">
+            <h2 style="text-align:left;font-size:30px">Certification Python</h2>
+            <h2 style="font-size:20px;color:#003148">15 Avril, 2025</h2>
+            <p>Certification IT Specialist</p>
+            <img src="ressources/parcours_imgs/python.png" width="500">
+        </div>
+    </div>
+
+     <!-- formation -->
+     <div class="timeline-item right">
+        <div class="content">
+            <h2 style="text-align:left;font-size:30px">Formation sur l'IA générative</h2>
+            <h2 style="font-size:20px;color:#003148">18 Février, 2025</h2>
+            <p>Certification IT Specialist</p>
+            <img src="ressources/parcours_imgs/formation.png" width="500">
+        </div>
+    </div>
+
+    <!-- Lycée Section -->
+    <div class="timeline-item left">
+        <div class="content">
+            <h2 style="text-align:left;font-size:30px">Lycée</h2>
+            <h2 style="font-size:20px;color:#003148">2023 Septembre - 2026 Mai</h2>
+            <p>Cycle terminal au lycée (filière scientifique), IPLT Gheorghe Asachi.</p>
+            <b><p style ="color:#0b5c059e">L’horizon s’élargit par le prisme de la science.</p></b>
+            <img src="ressources/parcours_imgs/asachi.png" width="200">
+        </div>
+    </div>
+  <!-- école coll -->
+  <div class="timeline-item left">
+    <div class="content">
+        <h2 style="text-align:right;font-size:30px">Collège</h2>
+        <h2 style="font-size:20px;color:#003148">2018 Septembre - 2023 Mai</h2>
+        <p>Élève en cycle collégial à l'IPLT Gheorghe Asachi.</p>
+        <img src="ressources/parcours_imgs/asachi.png" align-items="center" width="200">
+    </div>
+</div>
+   <!-- école msq Section -->
+    <div class="timeline-item right">
+        <div class="content">
+            <h2 style="text-align:left; font-size:30px" >École de Musique Maria Bieșu</h2>
+            <h2 style="font-size:20px;color:#003148">2014 Octobre - 2021 Juin</h2>
+            <p>Études de violon et de piano à l'École de Musique Maria Bieșu.</p>
+            <img src="ressources/parcours_imgs/ecole_msq.png" width="500">
+
+        </div>
+    </div>
+
+       
+
+        <div class="timeline-item left">
+            <div class="content">
+                <h2 style="text-align:right; font-size:30px">École élémentaire</h2>
+                <h2 style="font-size:20px;color:#003148">2014 Septembre - 2018 Mai</h2>
+                <p>Élève en cycle élémentaire à l'IPLT Gheorghe Asachi.</p>
+                <b><p style="color:#0b5c059e">Premiers pas, grandes ambitions. À suivre...</p></b>
+                <img src="ressources/parcours_imgs/asachi.png" width="200">
+            </div>
+        </div>
+ 
+
+
+
+
+  
+ 
+
+  
+
+</div>
+
 
     <!-- Footer -->
     <div class="footer">
-        <h2>Mai multe informații pe:</h2>
-        <a href="https://asachi.md/orar/orarul-lectiilor/clase-liceale/">Orarul Lecțiilor - Liceul Teoretic Gheorghe Asachi</a>
-        <div>
-            <img src="gheorghe.jpg" alt="Gheorghe Asachi" width="200">
-            <img src="asachi.jpg" alt="Asachi" width="200">
-            <img src="volvo.jpg" alt="Volvo" width="200">
+        <a href="https://asachi.md" style="color:#a3a9f8"><b>Site d'École / du Lycée: </b>www.asachi.md</a><br>
+        <a href="https://www.certiport.com/portal/pages/credentialverification.aspx" style="color:#a3a9f8"><b>Pour verifier les certifications Certiport (Student ID: Rien, Date de naissaince: 16.07.2007): </b>verify.certiport.com</a>        <div>
+            <img src="ressources/int_blk.png" width="50">
+            <img src="ressources/bh.gif" width="50">
+            <img src="ressources/int2_blk.png" width="50">
+            <img src="ressources/computed_blk.png" width="50">
+            <img src="ressources/cinematic_blk.png" width="50">
+            <img src="ressources/vlt_blk.png" width="50">
+            <img src="ressources/vid_blur.png" width="50">
+            <img src="ressources/saturn_blk.png" width="50">
+            <img src="ressources/rnd_blk.png" width="50">
+            <img src="ressources/real_blk.png" width="50">
+            
         </div>
     </div>
+    <script>
+        // Select all timeline items
+const timelineItems = document.querySelectorAll('.timeline-item');
+
+// Function to check if an element is in the viewport
+function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top < window.innerHeight && rect.bottom >= 0
+    );
+}
+
+// Add 'show' class when the element is in the viewport
+function handleScroll() {
+    timelineItems.forEach(item => {
+        if (isInViewport(item)) {
+            item.classList.add('show');
+        }
+    });
+}
+
+// Trigger the scroll event on page load to show items already in the viewport
+handleScroll();
+
+// Listen for scroll events
+window.addEventListener('scroll', handleScroll);
+    </script>
+
 </body>
 </html>
